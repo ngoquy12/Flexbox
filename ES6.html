@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6</title>
+</head>
+<body style="position: relative">
+<h1 style="position: absolute; left: 220px; top: 175px ">Do you love me?</h1>
+<button style="position:absolute;left: 285px;top:235px;" id="button-yes" onclick="acceptLove()">YES</button>
+<button style="position:absolute;left: 360px;top:235px;" id="button-no" onmouseover="refuseLove()">NO</button>
+
+<script>
+    // Lấy ra button Yes
+    let buttonYes = document.getElementById('button-yes');
+
+    // Lấy ra button No
+    let buttonNo = document.getElementById('button-no');
+
+    // Khai báo hàm khi click vào nút yes
+    function refuseLove() {
+        let height = Math.round(Math.random() * window.innerHeight);
+        let width = Math.round(Math.random() * window.innerWidth);
+        document.getElementById('button-no').style.left = width + 'px'
+        document.getElementById('button-no').style.top = height + 'px'
+    }
+
+    function acceptLove() {
+        document.write('T LOVE YOU')
+    }
+
+</script>
+</body>
+</html>

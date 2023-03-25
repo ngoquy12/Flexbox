@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0,
+            maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+    // // let arrays = [3,4,1,9,2];
+    // // let count =0
+    // //
+    // // for(let i=0; i< arrays.length-1;i++){
+    // //     console.log('Vòng lặp ngoài lặp lần thứ: '+i)
+    // //     let tg =0;
+    // //     for(let j=i+1; j<arrays.length;j++){
+    // //         console.log('Vòng lặp trong lặp lần thứ: '+j)
+    // //          if(arrays[i] > arrays[j]){
+    // //              tg=arrays[i];
+    // //              arrays[i] = arrays[j];
+    // //              arrays[j] = tg;
+    // //          }
+    // //         console.log(arrays)
+    // //         console.log('Số lần lặp: '+count++)
+    // //     }
+    // // }
+    //
+    // //    split chuyển chuỗi thành mảng
+    // let myName = 'N,g,o,v,a,n,q,u,y';
+    // console.log(myName.split())
+    // // join() chuyển mảng thành chuỗi || toString()
+    //
+    //
+    // let numbers = [1, 2, 3, 4];
+    // console.log(numbers + 1);
+    // // for-in sẽ trả về index của mảng
+    // for (const number in numbers) {
+    //     // Mỗi lần lặp thì for-in sẽ trả về index
+    //     // index = 0,1,2, 3
+    //     console.log(numbers[number])
+    //     console.log(numbers[0])
+    //     // 1
+    //     // 1,2,3,4
+    // }
+    //
+    // let number1 = [1, 2, 3, 4];
+    //
+    // let number2 = [5, 6];
+    //
+    // let number3 = number1.concat(number2);
+    // // number3 = [1,2,3,4,5,6]
+    // // Vị trí của phần tử trong mảng bắt đầu ở vị trí số: 0 và kết thúc ở length-1
+    //
+    // // Biến lưu trữ
+    // let sum = 0;
+    //
+    // for (let i = 0; i < number3.length; i++) {
+    //     // i là index 0 ,1,2,3,4,5
+    //     sum += i;
+    //     // sum+=number3[i]
+    //     //i=0 => sum= 1
+    //     //number3[1] =2
+    //     // i=1 => sum = 1+2=3
+    //     //i=2=> number3[2] = 3
+    //
+    //     // i=5 =>
+    // }
+    // console.log(sum);
+    //
+    //
+    // // let number1 = [1,2,3,4,5,6];
+    //
+    // // Bieén lưu trữ
+    // let sum = 0;
+    //
+    // for(let i = 0; i< number1.length; i++){
+    //
+    //     if(i%2==0)
+    //     // i= 0, 2, 4
+    //     {
+    //         sum+=number1[i];
+    //     }
+    //
+    // }
+    // Cách 1
+
+    // let array1 = [1,2,3,4];
+    // console.log(typeof  array1)
+    //
+    // // Cách 2
+    // let array2 = new Array(1,2,3);
+    // // Cách 3
+    //
+    // let array3 = 'quy';
+    // array3[0] = 'quy';
+    // array3[1] = 'ngo'
+    // console.log( array3)
+    //
+    // const plants = ['A', 'B', 'C', 'D', 'E'];
+    // // pop() sử dungj để loại bỏ phần tử cuối mảng. Tuy nhiên kết quả trả về là phần tử đã loại bỏ
+    // console.log(plants.pop());
+    // // KẾt quả: E
+    //
+    // // push(), pop(), shift(), unshift()
+    // // map(), reduce, ,....
+    //
+    // const plants = ['A', 'B', 'C', 'D', 'E'];
+    //
+    // // Đảo ngược mảng
+    // plants.reverse();
+    //
+    // console.log(plants)
+
+    // Cho mảng sau :
+    let array = [2, 6, 9, 1, 3];
+    console.log('Do dai cua mang la : ', array.length)
+    // Yêu cầu: sắp xếp mảng trên theo thứ tự tăng dần mà không dùng sort();
+
+    // [1,2,3,6,9]
+    // ý tưởng: so sánh phần tử thứ nhất và phần tử thứ 2
+    // + Nếu phần tử thứ nhất > phần tử thứ 2 thì => Đổi vị trí
+    // +  Nếu phần tử thứ nhất < phần tử thứ 2 thì => Giữ nguyên
+    // + Sử dụng 2 vòng lặp for lồng nhau
+    // Đổi vị trí hai phần tử: Sử dụng một biến trung gian để đoiỏ chỗ các phần tử
+    // Vòng lặp for bên ngoài: phần tử đầu và vòng lặp for bên trong sẽ làm phần tử kế tiếp để đem so sánh
+
+    for (let i = 0; i < array.length - 1; i++) {
+        console.log('Lượt chạy của i lần thứ: ',i)
+        let tg = 0;
+        for (let j = i + 1; j < array.length; j++) {
+            console.log('Lượt chạy của j lần thứ: ',j)
+            if(array[i] > array[j]){
+                tg = array[i];
+                array[i] = array[j];
+                array[j]  =tg;
+            }
+            console.log(array);
+        }
+    }
+        // let array = [2, 6, 9, 1, 3];
+
+    console.log(array)
+    // Lần chạy 1: i = 0 thì j=1;
+    // array[0] = 2 array[1]
+    // Lấy 2 > với 6 => trả về giá trị false
+    // array = [2,6,9,1,3]
+    // Lần 2: i=0 thì j =2
+    //array[0] là 2 và array[2] là 9 => false
+    //array = [2,6,9,1,3]
+    // Lần 3: i=0, j=3
+    // array[0] = 2 và array[3]  =1 <=> so sánh 2 > 1 => true
+    // Vì là true: chạy câu lệnh bên trong if
+    // array = [1, 6,9, 2, 3]
+    // array[0] = 2 và array[4]  =1 <=> so sánh 2 > 3 => false
+    //=> Mảng mới sau lần chạy thứ 1 của i: array = [1, 6, 9, 2, 3]
+
+    // Lần chạy thứ 2 của i
+    // array[1] =6, array[2] = 9
+    // 6 > 9 => false => giữ nguyên => array= [1,6,9,2,3]
+    // Tăng j lên 1 thì j = 3
+    // array[1] = 6 , array[3] = 2;
+    // 6 > 2 => true => array = [1,2,9,6,3]
+    // Tăng  j lên 1 thì j =4
+    // array[1] = 2 , array[4] = 3
+    // 2 > 3 => true => array = [1,2,9, 6, 3]
+
+
+</script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toast message</title>
+</head>
+<body>
+<style>
+
+    body{
+        background-image: linear-gradient(#ee4d2d,#ff7337);;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .arrow-up {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+        position: absolute;
+        top: -10px;
+        right: 25px;
+    }
+
+    .box {
+        width: 300px;
+        background-color: #fff;
+        height: 200px;
+        border: 1px solid #dadada;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 4px;
+    }
+
+    .toast {
+        position: absolute;
+    }
+
+</style>
+<div class="container">
+    <div class="toast">
+        <div class="arrow-up"></div>
+        <div class="box"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
