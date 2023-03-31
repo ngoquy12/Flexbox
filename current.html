@@ -1,175 +1,189 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0,
-            maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 
-        <script>
+<script>
+    // build-in fuction: hàm được js xây dựng sẵn
+    // Hàm tự định nghĩa: do người lập trình viết
+    // console.log, Math.random(), Math.floor,..
 
-    // // let arrays = [3,4,1,9,2];
-    // // let count =0
-    // //
-    // // for(let i=0; i< arrays.length-1;i++){
-    // //     console.log('Vòng lặp ngoài lặp lần thứ: '+i)
-    // //     let tg =0;
-    // //     for(let j=i+1; j<arrays.length;j++){
-    // //         console.log('Vòng lặp trong lặp lần thứ: '+j)
-    // //          if(arrays[i] > arrays[j]){
-    // //              tg=arrays[i];
-    // //              arrays[i] = arrays[j];
-    // //              arrays[j] = tg;
-    // //          }
-    // //         console.log(arrays)
-    // //         console.log('Số lần lặp: '+count++)
-    // //     }
-    // // }
-    //
-    // //    split chuyển chuỗi thành mảng
-    // let myName = 'N,g,o,v,a,n,q,u,y';
-    // console.log(myName.split())
-    // // join() chuyển mảng thành chuỗi || toString()
-    //
-    //
-    // let numbers = [1, 2, 3, 4];
-    // console.log(numbers + 1);
-    // // for-in sẽ trả về index của mảng
-    // for (const number in numbers) {
-    //     // Mỗi lần lặp thì for-in sẽ trả về index
-    //     // index = 0,1,2, 3
-    //     console.log(numbers[number])
-    //     console.log(numbers[0])
-    //     // 1
-    //     // 1,2,3,4
-    // }
-    //
-    // let number1 = [1, 2, 3, 4];
-    //
-    // let number2 = [5, 6];
-    //
-    // let number3 = number1.concat(number2);
-    // // number3 = [1,2,3,4,5,6]
-    // // Vị trí của phần tử trong mảng bắt đầu ở vị trí số: 0 và kết thúc ở length-1
-    //
-    // // Biến lưu trữ
-    // let sum = 0;
-    //
-    // for (let i = 0; i < number3.length; i++) {
-    //     // i là index 0 ,1,2,3,4,5
-    //     sum += i;
-    //     // sum+=number3[i]
-    //     //i=0 => sum= 1
-    //     //number3[1] =2
-    //     // i=1 => sum = 1+2=3
-    //     //i=2=> number3[2] = 3
-    //
-    //     // i=5 =>
-    // }
-    // console.log(sum);
-    //
-    //
-    // // let number1 = [1,2,3,4,5,6];
-    //
-    // // Bieén lưu trữ
-    // let sum = 0;
-    //
-    // for(let i = 0; i< number1.length; i++){
-    //
-    //     if(i%2==0)
-    //     // i= 0, 2, 4
-    //     {
-    //         sum+=number1[i];
-    //     }
-    //
-    // }
-    // Cách 1
+    // hàm gồm 3 thành phần:
+    // từ khóa fuction
+    // tên hàm
+    // Khối lệnh
 
-    // let array1 = [1,2,3,4];
-    // console.log(typeof  array1)
-    //
-    // // Cách 2
-    // let array2 = new Array(1,2,3);
-    // // Cách 3
-    //
-    // let array3 = 'quy';
-    // array3[0] = 'quy';
-    // array3[1] = 'ngo'
-    // console.log( array3)
-    //
-    // const plants = ['A', 'B', 'C', 'D', 'E'];
-    // // pop() sử dungj để loại bỏ phần tử cuối mảng. Tuy nhiên kết quả trả về là phần tử đã loại bỏ
-    // console.log(plants.pop());
-    // // KẾt quả: E
-    //
-    // // push(), pop(), shift(), unshift()
-    // // map(), reduce, ,....
-    //
-    // const plants = ['A', 'B', 'C', 'D', 'E'];
-    //
-    // // Đảo ngược mảng
-    // plants.reverse();
-    //
-    // console.log(plants)
+    //2.  Gọi hàm
+    // Kết luận: Hàm được khởi tạo tuy nhiên chưa được chạy
+    // Hàm chỉ được chạy khi gọi đến nó
 
-    // Cho mảng sau :
-    let array = [2, 6, 9, 1, 3];
-    console.log('Do dai cua mang la : ', array.length)
-    // Yêu cầu: sắp xếp mảng trên theo thứ tự tăng dần mà không dùng sort();
+    //3. Các quy tắc đặt tên hàm
+    // Bắt đầu bằng chữ cái, dấu gạch dưới(_), Kí hiệu ($)
+    // Khi kí tự đầu tiên là chữ thì các kí tự đằng sau cs thể là số
+    // Đặt tên hàm theo quy tắc CamelCase: khi mà hàm có 2 từ trở lên thì viết thường từ đầu tiên và viết hóa từ thứ hai
+    // Khi mà khai báo nhièu hàm có tên giống nhau thì nó sẽ lấy hàm được khai báo sau cùng để gọi ==> Lưu ý
 
-    // [1,2,3,6,9]
-    // ý tưởng: so sánh phần tử thứ nhất và phần tử thứ 2
-    // + Nếu phần tử thứ nhất > phần tử thứ 2 thì => Đổi vị trí
-    // +  Nếu phần tử thứ nhất < phần tử thứ 2 thì => Giữ nguyên
-    // + Sử dụng 2 vòng lặp for lồng nhau
-    // Đổi vị trí hai phần tử: Sử dụng một biến trung gian để đoiỏ chỗ các phần tử
-    // Vòng lặp for bên ngoài: phần tử đầu và vòng lặp for bên trong sẽ làm phần tử kế tiếp để đem so sánh
 
-    for (let i = 0; i < array.length - 1; i++) {
-        console.log('Lượt chạy của i lần thứ: ',i)
-        let tg = 0;
-        for (let j = i + 1; j < array.length; j++) {
-            console.log('Lượt chạy của j lần thứ: ',j)
-            if(array[i] > array[j]){
-                tg = array[i];
-                array[i] = array[j];
-                array[j]  =tg;
-            }
-            console.log(array);
-        }
+    function $name() {
+        console.log('Hàm thứ nhất')
     }
-        // let array = [2, 6, 9, 1, 3];
 
-    console.log(array)
-    // Lần chạy 1: i = 0 thì j=1;
-    // array[0] = 2 array[1]
-    // Lấy 2 > với 6 => trả về giá trị false
-    // array = [2,6,9,1,3]
-    // Lần 2: i=0 thì j =2
-    //array[0] là 2 và array[2] là 9 => false
-    //array = [2,6,9,1,3]
-    // Lần 3: i=0, j=3
-    // array[0] = 2 và array[3]  =1 <=> so sánh 2 > 1 => true
-    // Vì là true: chạy câu lệnh bên trong if
-    // array = [1, 6,9, 2, 3]
-    // array[0] = 2 và array[4]  =1 <=> so sánh 2 > 3 => false
-    //=> Mảng mới sau lần chạy thứ 1 của i: array = [1, 6, 9, 2, 3]
+    function $name() {
+        console.log('Hàm thứ hai')
 
-    // Lần chạy thứ 2 của i
-    // array[1] =6, array[2] = 9
-    // 6 > 9 => false => giữ nguyên => array= [1,6,9,2,3]
-    // Tăng j lên 1 thì j = 3
-    // array[1] = 6 , array[3] = 2;
-    // 6 > 2 => true => array = [1,2,9,6,3]
-    // Tăng  j lên 1 thì j =4
-    // array[1] = 2 , array[4] = 3
-    // 2 > 3 => true => array = [1,2,9, 6, 3]
+    }
+
+    function $name() {
+        console.log('Hàm thứ ba')
+    }
+
+    $name();
+
+    //4. Có 3 loại hàm
+    // Loại 1: Declaration function
+    function sub() {
+        console.log('Đây là Declaration function')
+    }
+
+    // Gọi hàm (callback)
+    sub();
+
+    // Loại 2: Expresion fuction
+    let listUser = function () {
+        console.log('Đây là Expresion fuction');
+    }
+    listUser();
+
+    // Loại 3: Arrow fuction => Khuyên dùng bởi cú pháp ngắn gọn hơn
+    let litsProduct = () => {
+        console.log('Đây là Arrow fuction');
+    }
+    litsProduct();
+
+    // 5. Return trong hàm
+    // return : trả về
+
+    // Tỉnh tổng hai số
+    function sum(a, b) {
+        return a + b;
+    }
+
+    console.log('Tổng hai số là: ' + sum(2, 3));
+    // vai trò của hàm
+    // Tái sử dụng code
+    // Giúp cho code được gọn gàng hơn
+
+    //6. Tham số, đối số
+    // Tham số là những giá trị được truyền vào khi hàm được khởi tạo
+    // Đối số là những giá trị được truyền vào khi hàm được gọi
+
+    function getName() {
+        let firstName = 'nvquy';
+        console.log(firstName);
+    }
+
+    getName();
+    //Bài tập 1:  Kiểm tra số nguyên tố nhập vào từ bàn phím
+    // Số nguyên tố là số chia hết cho 1 và chính nó
+    // Yêu cầu: Viết chương trình sử dụng hàm để kiểm tra n có phải là số nguyên tố?
+
+    let number = +prompt('Nhập số : ');
+
+    function isPrimse(n) {
+        // Kiểm tra n có phải là một số nguyên?
+        // n = ''
+        if (isNaN(n) == true) {
+            return false;
+        }
+        // KIểm tra những số nhỏ hơn 2 thì không phải là số nguyên tố
+        if (n < 2) {
+            return false;
+        }
+        // Kiểm tra số n=2 thì n là số nguyên tố
+        if (n == 2) {
+            return true;
+        }
+        // n > 2
+        for (let i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+        // Khi hàm gặp từ khoas return thì nó sẽ kết thúc hàm
+    }
+
+    // Gọi hàm
+    if (isPrimse(number)) {
+        console.log(number + " là số nguyên tố")
+    } else {
+        console.log(number + " không phải là số nguyên tố")
+
+    }
+
+    // Tạo ra hai biến nhập vào từ bàn phím
+    // Khởi tạo hai hàm với mỗi hàm truyền vào tham số
+    // tiên hành tình
+
+    // Đối số của hàm khi được gọi chính là tham số của hàm khi được khởi tạo
+    // Bài tập 2: Viết hàm tính chu vi và diện tích của hình tròn
+    let r = +prompt('Nhập bán kính hình tròn: ');
+
+    function chuVi(r) {
+        return r * 2 * 3.14;
+    }
+
+    function dienTich(r) {
+        return r * r * 3.14;
+    }
+
+    console.log('Chu vu hình tròn là: ' + chuVi(r));
+    console.log('Dien tich hình tròn là: ' + dienTich(r));
+
+    //Bài tập 3: Tính giai thừa của một số
+    // !5 = 4*3*2*1
+    // Yếu cầu: Nhập vào một số n từ bàn phím và tính giai thừa của nó đó.
+
+    let number2 = +prompt('Nhap so muon tinh giai thua');
+    let sum2 = 1;
+    function giaiThua(number2) {
+        for (let i = number2; i >= 1; i--) {
+            sum2 *= i;
+        }
+        return sum2;
+    }
+    console.log('Giai thua:', giaiThua(number2))
+
+    // Bài tập 4: Nhập vào 3 số nguyên bất kì a,b,c. In ra số nhỏ nhất trong ba số
+     let x= +prompt('Nhap a');
+     let y= +prompt('Nhap b');
+     let z= +prompt('Nhap c');
+
+    let number1= +prompt('Nhap a');
+    let number2= +prompt('Nhap b');
+    let number3= +prompt('Nhap c');
+    function maxNumber(g,h,t){
+        let max = g;
+        if(h>max){
+            return h;
+        }
+        if(t>max){
+            return t;
+        }
+        return max;
+    }
+
+    console.log('SỐ lớn nhất là: '+maxNumber(x,y,z));
+    console.log('SỐ lớn nhất là: '+maxNumber(number1,number2,number3));
+
 
 
 </script>
-    </body>
+</body>
 </html>
